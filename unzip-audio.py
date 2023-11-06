@@ -7,6 +7,10 @@ base_directory = os.getcwd()
 # Specify the destination folder where you want to extract the contents
 destination_folder = "audio/"
 
+# Create the "audio" folder if it doesn't exist
+if not os.path.exists(destination_folder):
+    os.makedirs(destination_folder)
+
 # Iterate through the file names from "001.zip" to "114.zip"
 for i in range(1, 115):
     file_name = f"{i:03d}.zip"  # Format the file name with leading zeros if needed
